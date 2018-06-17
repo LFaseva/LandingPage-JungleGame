@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+*{
+    transition: all 1s;
+    box-sizing: border-box;
+}
+body{
+    display: block;
+    background-image: url('../img/bg2-min.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo{
+    display: block;
+    margin: 0 auto auto;
+    width: 40%;
+}
+.start{
+    display: block;
+    width: 180px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    cursor: pointer;
+    background-image: url(../img/table-min.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: moveY 4s infinite linear alternate;
+}
+.start a{
+    right: 50px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    position: absolute;
+    top: 55px;
+    font-weight: bold;
+    transform: rotateZ(5deg);
+}
+.start:hover{
+    transform: rotateY(5deg);
+}
+.author{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    display: block;
+    background-image: url(../img/back-min.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    animation: moveY 4s infinite linear alternate;
+}
+
+.author span{
+    top: 120px;
+    left: 40px;
+    position: absolute;
+    font-weight: bold;
+}
+@keyframes moveY{
+    from{
+        transform: rotateY(-20deg);
+    }
+    to{
+        transform: rotateY(20deg);
+    }
+}
+.info{
+    display: flex;
+    width: 500px;
+    position: absolute;
+    top:-600px;
+    left: calc(50% - 250px);
+    z-index: 3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1a481a;
+    padding: 30px;
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+}
+.showInfo{
+    top: 0;
+}
+.info span{
+    font-size: 16px;
+    margin: 10px 0;
+}
+.photo{
+    width: 300px;
+    display: inline-flex;
+    height: 300px;
+    border-radius: 50% 50%;
+    background-image: url(../img/me-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -110px 0px;
+    margin-bottom: 30px;
+}
+.links{
+    margin: 20px 0;
+}
+.links a{
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50%;
+}
+.links a:hover{
+    background: white;
+}
+/*=========cube=============*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: center -5em;
+}
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+
+.side,
+.container {
+    width: 15em;
+    height: 15em;
+}
+
+.container {
+    position: absolute;
+    top: 250px;
+    transform-style: preserve-3d;
+    animation: rotate 15s infinite linear ;
+}
+
+.side {
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    border: 1px solid #7e83ff;
+    opacity: 1;
+}
+.side img{
+    width: 100%;
+    height: 100%;
+}
+.back {
+    transform: translateZ(-7.5em);
+}
+.front{
+    transform: translateZ(7.5em);
+}
+.left{
+    transform: translateX(-7.5em)  rotateY(90deg);
+}
+.right{
+    transform: translateX(7.5em)  rotateY(90deg);
+}
+.bottom{
+    transform: translateY(7.5em)  rotateX(90deg);
+ }
+.top{
+    transform: translateY(-7.5em)  rotateX(90deg);
+}
+
+@keyframes rotate {
+    100%{
+        transform: rotateX(360deg) rotateY(360deg) rotateY(360deg);
+    }
+}
