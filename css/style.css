@@ -140,7 +140,7 @@ html, body{
 
 .container {
     position: absolute;
-    top: 250px;
+    top: 350px;
     transform-style: preserve-3d;
     animation: rotate 30s infinite linear ;
 }
