@@ -1,2 +1,2 @@
 # LandingPage-JungleGame
-landing page for education game Jungle.
+ link : https://lfaseva.github.io/LandingPage-JungleGame/
